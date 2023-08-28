@@ -1,2 +1,2 @@
-# rock_papers_scissors
+# Rock_Paper_Scissors
 The game, yeah

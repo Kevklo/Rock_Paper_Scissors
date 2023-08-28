@@ -1,10 +1,10 @@
 function computerChoice() {
-  //Every tool is asigned to a value, Rock = 0, Papers = 1, Scissor = 2//
+  //Every tool is asigned to a value, Rock = 0, Paper = 1, Scissor = 2//
   num = Math.floor(Math.random() * 3);
   if(num == 0){
     return "rock";
   } else if( num == 1){
-    return "papers";
+    return "paper";
   }
   return "scissors";
 }
@@ -13,7 +13,7 @@ function computerChoice() {
 function toolToNumber(tool) {
   if(tool == "rock"){
     return 0;
-  } else if(tool == "papers"){
+  } else if(tool == "paper"){
     return 1;
   } else if(tool == "scissors"){
     return 2;
@@ -21,7 +21,7 @@ function toolToNumber(tool) {
 }
 
 //2, 1 and 0 represent win draw and lose respectively//
-//when the player chooses papers or scissors and wins, player - computer == 1, because (1,0) is a win and (2,1) is a win//
+//when the player chooses paper or scissors and wins, player - computer == 1, because (1,0) is a win and (2,1) is a win//
 //the only other value that wins is (0,2), that explains the firts if//
 function playround(player, computer) {
   if(player - computer == 1 || (player == 0 && computer == 2)){
@@ -35,7 +35,7 @@ function playround(player, computer) {
 
 //Returns true is the Tool is Valid, false if not//
 function validTool(tool){
-  return (tool == "rock" || tool == "papers" || tool == "scissors");
+  return (tool == "rock" || tool == "paper" || tool == "scissors");
 }
 
 function play() {
@@ -46,7 +46,7 @@ function play() {
     tool = prompt("Select your tool").toLowerCase();
     //if the tool is not an option, we make them choose another untill they choose a valid option//
     while(!validTool(tool)){
-        console.error(`Not a valid tool, select 'rock', 'papers' or 'scissors'`);
+        console.error(`Not a valid tool, select 'rock', 'paper' or 'scissors'`);
         tool = prompt("Select your tool").toLowerCase();
     }
     com_tool = computerChoice();

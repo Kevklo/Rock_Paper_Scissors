@@ -2,6 +2,30 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 800px){
+  .game {
+    display: flex  !important;
+    flex-direction: column  !important;
+    align-items: center;
+  }
+  .result p {
+    align-items: center !important;
+    justify-content: center  !important;
+    font-size: 80% !important;
+  }
+  .result button {
+    font-size: 50% !important;
+  }
+  .player_box p {
+    font-size: 120% !important;
+    margin: 15% 0 15% 0 !important;
+  }
+  .computer_box p {
+    font-size: 120% !important;
+    margin: 15% 0 15% 0 !important;
+  }
+}
+
 body {
   background-color: #1d242e;
 }
@@ -14,7 +38,9 @@ main {
 
 .title {
   color: azure;
-  margin-bottom: 7%;
+  margin-bottom: 4%;
+  font-size: 300%;
+  text-align: center;
 }
 
 .game {
@@ -78,22 +104,39 @@ button {
 .result {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   color: white;
   font-size: 300%;
-  margin-top: 0;
+  margin-top: 4%;
 }
 
-.description {
-  margin: 1% 0 1% 0;
+.result p {
+  margin: 1% 0 2% 0;
+  text-align: center;
 }
 
-.score {
-  margin: 1% 0 1% 0;
+.player_box p {
+  font-size: 150%;
+  margin: 6% 0 6% 0;
+}
+
+.computer_box p {
+  font-size: 150%;
+  margin: 6% 0 6% 0;
 }
 
 .retry {
-  font-size: 80%;
   visibility: hidden;
   width:auto;
+  padding: 3% 5% 3% 5%;
+  font-size: 80%;
+}
+
+.retry:hover {
+  cursor: pointer;
+}
+
+.retry:active {
+  background-color: #88ace7;
 }

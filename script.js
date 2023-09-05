@@ -107,14 +107,18 @@ function finishMatch(won) {
     let win = document.createElement('p');
     win.innerText = "You Win";
     result.insertBefore(win, result.firstChild);
+    retry.innerText = "Play again?"
+    retry.setAttribute('style', 'visibility: visible');
   } else {
     document.querySelector('.score').innerText = "";
     document.querySelector('.description').innerText = "";
     let win = document.createElement('p');
     win.innerText = "You Lose";
     result.insertBefore(win, result.firstChild);
+    retry.innerText = "Retry?"
+    retry.setAttribute('style', 'visibility: visible');
   }
-  retry.setAttribute('style', 'visibility: visible');
+  
 }
 
 let player_score = 0;

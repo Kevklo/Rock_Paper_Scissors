@@ -13,6 +13,60 @@ function numberToTool(tool) {
   }
 }
 
+function highlightComputerChoice_red(computer) {
+  const scissors = document.querySelector('.scissors_computer');
+  const rock = document.querySelector('.rock_computer');
+  const paper = document.querySelector('.paper_computer');
+  scissors.setAttribute('style', 'background-color: #3882f6');
+  paper.setAttribute('style', 'background-color: #3882f6');
+  rock.setAttribute('style', 'background-color: #3882f6');
+  if(computer == 2){
+    scissors.setAttribute('style', 'background-color: #FE937C');
+  }
+  if(computer == 1){
+    paper.setAttribute('style', 'background-color: #FE937C');
+  }
+  if(computer == 0){
+    rock.setAttribute('style', 'background-color: #FE937C');
+  }
+}
+
+function highlightComputerChoice_green(computer) {
+  const scissors = document.querySelector('.scissors_computer');
+  const rock = document.querySelector('.rock_computer');
+  const paper = document.querySelector('.paper_computer');
+  scissors.setAttribute('style', 'background-color: #3882f6');
+  paper.setAttribute('style', 'background-color: #3882f6');
+  rock.setAttribute('style', 'background-color: #3882f6');
+  if(computer == 2){
+    scissors.setAttribute('style', 'background-color: #B5FE7C');
+  }
+  if(computer == 1){
+    paper.setAttribute('style', 'background-color: #B5FE7C');
+  }
+  if(computer == 0){
+    rock.setAttribute('style', 'background-color: #B5FE7C');
+  }
+}
+
+function highlightComputerChoice_blue(computer) {
+  const scissors = document.querySelector('.scissors_computer');
+  const rock = document.querySelector('.rock_computer');
+  const paper = document.querySelector('.paper_computer');
+  scissors.setAttribute('style', 'background-color: #3882f6');
+  paper.setAttribute('style', 'background-color: #3882f6');
+  rock.setAttribute('style', 'background-color: #3882f6');
+  if(computer == 2){
+    scissors.setAttribute('style', 'background-color: #88ace7');
+  }
+  if(computer == 1){
+    paper.setAttribute('style', 'background-color: #88ace7');
+  }
+  if(computer == 0){
+    rock.setAttribute('style', 'background-color: #88ace7');
+  }
+}
+
 //2, 1 and 0 represent win draw and lose respectively//
 //when the player chooses paper or scissors and wins, player - computer == 1, because (1,0) is a win and (2,1) is a win//
 //the only other value that wins is (0,2), that explains the firts if//
@@ -24,11 +78,13 @@ function playround(player, computer) {
     display_result.innerText = `${player_score}-${computer_score}`;
     const desc = document.querySelector('.description');
     desc.innerText = `You win, ${numberToTool(player)} beats ${numberToTool(computer)}`;
+    highlightComputerChoice_green(computer);
     return res;
   } else if(player == computer){
     let res = 1;
     const desc = document.querySelector('.description');
     desc.innerText = `You drew this round, both selected ${numberToTool(computer)}`;
+    highlightComputerChoice_blue(computer);
     return res;
   } else {
     let res = 0;
@@ -37,6 +93,7 @@ function playround(player, computer) {
     display_result.innerText = `${player_score}-${computer_score}`;
     const desc = document.querySelector('.description');
     desc.innerText = `You lose, ${numberToTool(computer)} beats ${numberToTool(player)}`;
+    highlightComputerChoice_red(computer);
     return res;
   }
 }

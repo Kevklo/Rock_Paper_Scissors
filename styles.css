@@ -77,6 +77,23 @@ button {
 
 .result {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
-  font-size: 300%
+  font-size: 300%;
+  margin-top: 0;
+}
+
+.description {
+  margin: 1% 0 1% 0;
+}
+
+.score {
+  margin: 1% 0 1% 0;
+}
+
+.retry {
+  font-size: 80%;
+  visibility: hidden;
+  width:auto;
 }

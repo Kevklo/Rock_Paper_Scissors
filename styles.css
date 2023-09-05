@@ -75,7 +75,8 @@ button {
   background-color: #0a295c;
 }
 
-.results {
+.result {
+  display: flex;
   color: white;
   font-size: 300%
 }

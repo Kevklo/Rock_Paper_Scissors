@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>rock_papers_scissors</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main>
@@ -14,9 +14,9 @@
         <div class="player_box">
           <p>Player</p>
           <div class="player_button">
-            <button>&#129704</button>
-            <button>&#128196</button>
-            <button>&#9986</button>
+            <button class="rock">&#129704</button>
+            <button class="paper">&#128196</button>
+            <button class="scissors">&#9986</button>
           </div>
         </div>
         <div class="computer_box">
@@ -28,8 +28,10 @@
           </div>
         </div>
       </section>
-      <div class="results">
-        <p>0-0</p>
+      <div class="result">
+        <p class="player_score">0</p>
+        <p>-</p>
+        <p class="computer_score">0</p>
       </div>
     </main>
   </body>

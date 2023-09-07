@@ -140,3 +140,25 @@ button {
 .retry:active {
   background-color: #88ace7;
 }
+
+.foot {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #1F2937;
+  padding: 2% 0 2% 0;
+  color: white;
+}
+
+.credit {
+  font-weight: lighter;
+  font-size: 120%;
+  font-family: sans-serif;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
